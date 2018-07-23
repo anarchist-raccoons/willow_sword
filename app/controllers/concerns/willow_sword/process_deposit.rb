@@ -69,6 +69,10 @@ module WillowSword
         # process xml
         # puts 'process xml'
         process_xml
+      when 'text/xml'
+        # process xml
+        # puts 'process xml'
+        process_xml
       else
         # puts 'Unknown format of data'
         message = "Server does not support the content type #{@data_content_type}"

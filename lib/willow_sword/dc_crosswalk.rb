@@ -23,7 +23,16 @@ module WillowSword
         'created' =>'date_created',
         'rights' => 'rights_statement',
         'relation' => 'related_url',
-        'type' => 'resource_type'
+        'type' => 'resource_type',
+        
+        # these exist in dog_biscuits
+        'available' => 'date_available',
+        'format' => 'dc_format',
+        'accepted' => 'date_accepted',
+        'dateCopyrighted' => 'date_copyrighted',
+        'dateSubmitted' => 'date_submitted',
+        'valid' => 'date_valid',
+        'issued' => 'date_issued',
       }
     end
 
