@@ -23,7 +23,8 @@ module Integrator
         # puts "Files uploaded: #{@file_ids}"
       end
 
-      def add_work
+      def add_work(model)
+        @work_klass = model.constantize if !model.blank? && WillowSword.config.work_models.include?(model)
         # puts 'In add_work'
         @object = find_work
         if @object
@@ -68,6 +69,7 @@ module Integrator
       end
 
       private
+        # @todo get this from a custom header or default to this
         def set_work_klass
           @work_klass = WillowSword.config.work_models.first.singularize.classify.constantize
         end

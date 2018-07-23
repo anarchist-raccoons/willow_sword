@@ -57,7 +57,9 @@ module WillowSword
         fetch_data_content_type
         return false unless process_data
         upload_files unless @files.blank?
-        add_work
+        puts headers[:hyrax_work_model]
+        puts 'I JUST PUTTED AGAIN'
+        add_work(headers[:hyrax_work_model])
         true
       end
 
